@@ -1,0 +1,549 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.4/TweenMax.min.js"></script> -->
+
+    <!-- TweenMax  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <!-- scrollMagic -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js"></script>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mukta&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Mukta:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/256f0e58cb.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- bootstrap toggle button  -->
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+
+    <link rel="stylesheet" href="index.css" id="styles"/>
+
+    <style></style>
+  </head>
+  <body>
+    <div id="cursor"></div>
+    <div>
+      <div class="container-fluid layer " id="layer">
+        <div class="container-fluid text" id="hello">HELLO</div>
+      </div>
+      <!-- <div class="container-fluid layer1 layer2" id="workLayer">
+           <div class="container-fluid text worksColor" id="works">
+        
+        <p>PROJECTS</p>
+      </div>
+      </div> -->
+
+      <div class="container-fluid" id="header">
+        <p id="name">PRASAD VALLABHANENI</p>
+      </div>
+      <a href="#" class="navtags"><p id="home">Home</p></a>
+      <a href="#projectList" class="navtags"><p id="wrk">Works</p></a>
+         <div id="toggle">
+         <!-- <ion-icon name="contrast-outline" size="large"></ion-icon> -->
+         <i class="fas fa-sun fa-lg" id="sun"></i>
+      </div>
+      
+      <div class="container-fluid" id="about">
+        <p>
+          <span class="letter"><span class="letter-inner">I</span></span>
+          <span class="letter"><span class="letter-inner">a</span></span
+          ><span class="letter"><span class="letter-inner">m</span></span>
+          <span class="letter highlight"
+            ><span class="letter-inner">M</span></span
+          ><span class="letter highlight"
+            ><span class="letter-inner">E</span></span
+          ><span class="letter highlight"
+            ><span class="letter-inner">R</span></span
+          ><span class="letter highlight"
+            ><span class="letter-inner">N</span></span
+          >
+          <span class="letter highlight"
+            ><span class="letter-inner">S</span></span
+          ><span class="letter highlight"
+            ><span class="letter-inner">t</span></span
+          ><span class="letter highlight"
+            ><span class="letter-inner">a</span></span
+          ><span class="letter highlight"
+            ><span class="letter-inner">c</span></span
+          ><span class="letter highlight"
+            ><span class="letter-inner">k</span></span
+          >
+          <span class="letter highlight"
+            ><span class="letter-inner">D</span></span
+          ><span class="letter highlight"
+            ><span class="letter-inner">e</span></span
+          ><span class="letter highlight"
+            ><span class="letter-inner">v</span></span
+          ><span class="letter highlight"
+            ><span class="letter-inner">e</span></span
+          ><span class="letter highlight"
+            ><span class="letter-inner">l</span></span
+          ><span class="letter highlight"
+            ><span class="letter-inner">o</span></span
+          ><span class="letter highlight"
+            ><span class="letter-inner">p</span></span
+          ><span class="letter highlight"
+            ><span class="letter-inner">e</span></span
+          ><span class="letter highlight"
+            ><span class="letter-inner">r</span></span
+          >
+          <!-- <span class="highlight" id="role">MERN Stack Developer</span> -->
+          <br />
+          <span class="letter"><span class="letter-inner">c</span></span
+          ><span class="letter"><span class="letter-inner">u</span></span
+          ><span class="letter"><span class="letter-inner">r</span></span
+          ><span class="letter"><span class="letter-inner">r</span></span
+          ><span class="letter"><span class="letter-inner">e</span></span
+          ><span class="letter"><span class="letter-inner">n</span></span
+          ><span class="letter"><span class="letter-inner">t</span></span
+          ><span class="letter"><span class="letter-inner">l</span></span
+          ><span class="letter"><span class="letter-inner">y</span></span>
+          <span class="letter"><span class="letter-inner">b</span></span
+          ><span class="letter"><span class="letter-inner">a</span></span
+          ><span class="letter"><span class="letter-inner">s</span></span
+          ><span class="letter"><span class="letter-inner">e</span></span
+          ><span class="letter"><span class="letter-inner">d</span></span>
+          <span class="letter"><span class="letter-inner">o</span></span
+          ><span class="letter"><span class="letter-inner">n</span></span>
+          <span class="letter"><span class="letter-inner">c</span></span
+          ><span class="letter"><span class="letter-inner">h</span></span
+          ><span class="letter"><span class="letter-inner">e</span></span
+          ><span class="letter"><span class="letter-inner">n</span></span
+          ><span class="letter"><span class="letter-inner">n</span></span
+          ><span class="letter"><span class="letter-inner">a</span></span
+          ><span class="letter"><span class="letter-inner">i</span></span>
+          <!-- <span>
+            currently based on chennai <br />
+         
+         </span> -->
+          <br />
+          <!-- <span> Want to work with me? Yes I am <br /></span> -->
+          <span class="letter"><span class="letter-inner2">W</span></span
+          ><span class="letter"><span class="letter-inner2">a</span></span
+          ><span class="letter"><span class="letter-inner2">n</span></span
+          ><span class="letter"><span class="letter-inner2">t</span></span>
+          <span class="letter"><span class="letter-inner2">t</span></span
+          ><span class="letter"><span class="letter-inner2">o</span></span>
+          <span class="letter"><span class="letter-inner2">w</span></span
+          ><span class="letter"><span class="letter-inner2">o</span></span
+          ><span class="letter"><span class="letter-inner2">r</span></span
+          ><span class="letter"><span class="letter-inner2">k</span></span>
+          <span class="letter"><span class="letter-inner2">w</span></span
+          ><span class="letter"><span class="letter-inner2">i</span></span
+          ><span class="letter"><span class="letter-inner2">t</span></span
+          ><span class="letter"><span class="letter-inner2">h</span></span>
+          <span class="letter"><span class="letter-inner2">m</span></span
+          ><span class="letter"><span class="letter-inner2">e</span></span
+          ><span class="letter"><span class="letter-inner2">?</span></span>
+          <span class="letter"><span class="letter-inner2">Y</span></span
+          ><span class="letter"><span class="letter-inner2">e</span></span
+          ><span class="letter"><span class="letter-inner2">s</span></span>
+          <span class="letter"><span class="letter-inner2">I</span></span>
+          <span class="letter"><span class="letter-inner2">a</span></span
+          ><span class="letter"><span class="letter-inner2">m</span></span>
+          <br />
+          <span class="letter"
+            ><span class="letter-inner2"> &mdash;</span></span
+          >
+          <span class="letter"><span class="letter-inner">c</span></span
+          ><span class="letter"><span class="letter-inner">u</span></span
+          ><span class="letter"><span class="letter-inner">r</span></span
+          ><span class="letter"><span class="letter-inner">r</span></span
+          ><span class="letter"><span class="letter-inner">e</span></span
+          ><span class="letter"><span class="letter-inner">n</span></span
+          ><span class="letter"><span class="letter-inner">t</span></span
+          ><span class="letter"><span class="letter-inner">l</span></span
+          ><span class="letter"><span class="letter-inner">y</span></span>
+
+          <span class="letter scrollTarget1 highlight"
+            ><span class="letter-inner">a</span></span
+          ><span class="letter highlight"
+            ><span class="letter-inner">v</span></span
+          ><span class="letter highlight"
+            ><span class="letter-inner">a</span></span
+          ><span class="letter highlight"
+            ><span class="letter-inner">i</span></span
+          ><span class="letter highlight"
+            ><span class="letter-inner">l</span></span
+          ><span class="letter highlight"
+            ><span class="letter-inner">a</span></span
+          ><span class="letter highlight"
+            ><span class="letter-inner">b</span></span
+          ><span class="letter highlight"
+            ><span class="letter-inner">l</span></span
+          ><span class="letter highlight"
+            ><span class="letter-inner">e</span></span
+          >
+          <br />
+
+          <span class="letter" ><span class="letter-inner3">✌️</span> </span>
+
+          <!-- <span class="highlight scrollTarget1">available</span>. -->
+        </p>
+      </div>
+   
+      <div class="container-fluid" id="contact">
+        <p style="font-size: 15px; color: blue;padding: 3px;">Know about me &mdash;</p>
+
+        <button
+          type="button"
+          class="btn"
+          data-toggle="tooltip"
+          data-placement="top"
+          title="Resume"
+        >
+          <a
+            href="https://drive.google.com/file/d/1TxsiupKz9ZrIF4I5sVzXoWLRGgKAuue1/view?usp=sharing"
+            target="_blank"
+            ><p><i class="fas fa-id-card fa-lg" style="color: black"></i></p
+          ></a>
+        </button>
+
+        <button
+          type="button"
+          class="btn"
+          data-toggle="tooltip"
+          data-placement="top"
+          title="Github"
+        >
+          <a
+            href="https://github.com/PrasadVallabhaneni?tab=repositories"
+            target="_blank"
+            ><p><i class="fab fa-github fa-lg" style="color: black;padding: 3px;"></i></p
+          ></a>
+        </button>
+
+        <button
+          type="button"
+          class="btn"
+          data-toggle="tooltip"
+          data-placement="top"
+          title="linkedin"
+        >
+          <a
+            href="https://www.linkedin.com/in/prasad-vallabhaneni-486493156/"
+            target="_blank"
+            ><p><i class="fab fa-linkedin-in fa-lg" style="color: black"></i></p
+          ></a>
+        </button>
+
+        <button
+          type="button"
+          class="btn"
+          data-toggle="tooltip"
+          data-placement="top"
+          title="Send Mail"
+        >
+          <a href="mailto:vallabhanenivenkataprasad@gmail.com"
+            ><p><i class="fas fa-envelope fa-lg" style="color: black"></i></p
+          ></a>
+        </button>
+      </div>
+
+      <div class="container-fluid" id="works">
+        <div class="row">
+          <div class="col" id="cards">
+            <div class="cursor"></div>
+            <div class="wrapper">
+              <div class="project-list" id="projectList">
+                <div class="project p-10">
+                  <div style="display: block">
+                    <div class="project-title">
+                      <a href="" target="blank"><h1>My Drive <ion-icon name="chevron-down" size="small" id="down1" style="display: none; color:orange" ></ion-icon>
+
+                      </h1></a>
+                    </div>
+
+                    <div
+                      class="project-overlay"
+                      data-toggle="collapse"
+                      data-target="#collapseOne"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    ></div>
+                    <div id="accordion">
+                      <div
+                        id="collapseOne"
+                        class="collapse"
+                        aria-labelledby="headingOne"
+                        data-parent="#accordion"
+                      >
+                        <div class="card-body">
+                          <strong>"My Drive"</strong> is a MERN stack
+                          application with complete user authentication that
+                          allows users to upload and <br />
+                          manage their files and folders <br />
+
+                          <strong>FrontEnd</strong>: Reactjs <br />
+                          <strong>Backend</strong>: Nodejs,Expressjs,AWS S3,
+                          MongoDB
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="project-categ">
+                    <a href="https://my--drive.herokuapp.com/" target="_blank"
+                      ><span style="font-size: 25px; margin: 20px;"
+                        >Live Site</span
+                      ></a
+                    >
+
+                    <a
+                      href="https://github.com/PrasadVallabhaneni/CloudDrive-frontend"
+                      target="blank"
+                      ><i class="fab fa-github fa-2x" style="color: rgb(0, 153, 255);"></i
+                    ></a>
+                  </div>
+                </div>
+
+                <div class="project p-6">
+                  <div style="display: block">
+                    <div class="project-title">
+                      <a href=""><h1>Pick Nature <ion-icon name="chevron-down" size="small" id="down2" style="display: none; color:orange" ></ion-icon></h1></a>
+                    </div>
+
+                    <div
+                      class="project-overlay"
+                      data-toggle="collapse"
+                      data-target="#collapseTwo"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    ></div>
+                    <div id="accordion">
+                      <div
+                        id="collapseTwo"
+                        class="collapse"
+                        aria-labelledby="headingOne"
+                        data-parent="#accordion"
+                      >
+                        <div class="card-body">
+                          <strong>"Pick Nature"</strong> is a MERN Stack
+                          ecommerce application where users can buy plants
+                          online. <br />
+
+                          <strong>FrontEnd</strong>: Reactjs <br />
+                          <strong>Backend</strong>: Nodejs,Expressjs,MongoDB
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="project-categ">
+                    <a href="https://picknature.herokuapp.com/" target="_blank"
+                      ><span style="font-size: 25px; margin: 20px"
+                        >Live Site</span
+                      ></a
+                    >
+
+                    <a
+                      href="https://github.com/PrasadVallabhaneni/PickNature-frontend"
+                      target="blank"
+                      ><i class="fab fa-github fa-2x" style="color: rgb(0, 153, 255);"></i
+                    ></a>
+                  </div>
+                </div>
+                <div class="project p-7">
+                  <div style="display: block">
+                    <div class="project-title">
+                      <a href=""><h1>Voice Controlled News App <ion-icon name="chevron-down" size="small" id="down3" style="display: none; color:orange" ></ion-icon></h1></a>
+                    </div>
+
+                    <div
+                      class="project-overlay"
+                      data-toggle="collapse"
+                      data-target="#collapseThree"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    ></div>
+                    <div id="accordion">
+                      <div
+                        id="collapseThree"
+                        class="collapse"
+                        aria-labelledby="headingOne"
+                        data-parent="#accordion"
+                      >
+                        <div class="card-body">
+                          <strong>"Voice Controlled News App"</strong> is a
+                          completely voice based news application that reads and
+                          <br />
+                          display news on user voice commands. <br />
+
+                          <strong>FrontEnd</strong>: Reactjs <br />
+                          <strong>Backend</strong>: Alan API used for voice
+                          recognition.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="project-categ">
+                    <!-- https://voice-controll-news-app.netlify.app/ -->
+                    <a
+                      href="https://voice-controll-news-app.netlify.app"
+                      target="_blank"
+                      ><span style="font-size: 25px; margin: 20px"
+                        >Live Site</span
+                      ></a
+                    >
+
+                    <a
+                      href="https://github.com/PrasadVallabhaneni/Complete-Voice-Controll-Web-Application"
+                      target="blank"
+                      ><i class="fab fa-github fa-2x" style="color: rgb(0, 153, 255);"></i
+                    ></a>
+                  </div>
+                </div>
+                <div class="project p-8">
+                  <div style="display: block">
+                    <div class="project-title">
+                      <a href=""><h1>URL Shortener <ion-icon name="chevron-down" size="small" id="down4" style="display: none; color:orange" ></ion-icon></h1></a>
+                    </div>
+
+                    <div
+                      class="project-overlay"
+                      data-toggle="collapse"
+                      data-target="#collapseFour"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    ></div>
+                    <div id="accordion">
+                      <div
+                        id="collapseFour"
+                        class="collapse"
+                        aria-labelledby="headingOne"
+                        data-parent="#accordion"
+                      >
+                        <div class="card-body">
+                          <strong>"URL Shortener"</strong> is a full stack
+                          application that allows users to shorten long urls.
+                          <br />
+
+                          <strong>FrontEnd</strong>: HTML, CSS, Bootstrap <br />
+                          <strong>Backend</strong>: Nodejs, Expressjs, MongoDB
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="project-categ">
+                    <a
+                      href="https://url-shrtnr.netlify.app/index.html"
+                      target="_blank"
+                      ><span style="font-size: 25px; margin: 20px"
+                        >Live Site</span
+                      ></a
+                    >
+
+                    <a
+                      href="https://github.com/PrasadVallabhaneni/url-shortener-backend"
+                      target="blank"
+                      ><i class="fab fa-github fa-2x" style="color: rgb(0, 153, 255);"></i
+                    ></a>
+                  </div>
+                </div>
+                <div class="project p-9">
+                  <div style="display: block">
+                    <div class="project-title">
+                      <a
+                        href="https://my-js-journey.netlify.app/"
+                        target="blank"
+                        ><h1>My JS Journey <ion-icon name="chevron-down" size="small" id="down5" style="display: none; color:orange" ></ion-icon></h1></a
+                      >
+                    </div>
+
+                    <div
+                      class="project-overlay"
+                      data-toggle="collapse"
+                      data-target="#collapseFive"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    ></div>
+                    <div id="accordion">
+                      <div
+                        id="collapseFive"
+                        class="collapse"
+                        aria-labelledby="headingOne"
+                        data-parent="#accordion"
+                      >
+                        <div class="card-body">
+                          A blog of complete works that i had done throughout my
+                          javascript journey.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="project-categ">
+                    <a href="https://my-js-journey.netlify.app/" target="_blank"
+                      ><span style="font-size: 25px; margin: 20px"
+                        >Live Site</span
+                      ></a
+                    >
+
+                    <a
+                      href="https://github.com/PrasadVallabhaneni/My_JS_Journey/tree/main/My_JS_Journey"
+                      target="blank"
+                      ><i class="fab fa-github fa-2x" style="color: rgb(0, 153, 255);"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="index.js"></script>
+  </body>
+</html>
