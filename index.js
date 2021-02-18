@@ -1,3 +1,16 @@
+
+function setTheme(){
+  if(localStorage.getItem('theme')){
+      document.getElementById("styles").setAttribute("href", localStorage.getItem('theme'));
+      document.getElementById("toggle").innerHTML =
+        localStorage.getItem('icon');
+  }else{
+    document
+      .getElementById("styles")
+      .setAttribute("href", 'index.css');
+  }
+  
+}
 // scene1
 var controller = new ScrollMagic.Controller();
 var t1scroll = new TimelineMax();
@@ -21,7 +34,7 @@ var scene1 = new ScrollMagic.Scene({
   // })
   .on("enter", function () {
     setTimeout(() => {
-      document.getElementById("hello").innerHTML = "PROJECTS";
+      document.getElementById("hello").innerHTML = "SKILLS";
     }, 159);
 
     // document.getElementById("sun").style.transform="rotate(70deg)";
@@ -45,6 +58,46 @@ var scene1 = new ScrollMagic.Scene({
     });
   })
   .addTo(controller);
+
+
+  var scene2 = new ScrollMagic.Scene({
+    triggerElement: "#back",
+    triggerHook: "0.1",
+  })
+    // .red()
+    .setClassToggle(".layer", "layer3")
+    // .addIndicators({
+    //   name: "fadeout",
+    //   colorStart: "green",
+    //   colorEnd: "red",
+    //   indent: 100,
+    // })
+    .on("enter", function () {
+      setTimeout(() => {
+        document.getElementById("hello").innerHTML = "PROJECTS";
+      }, 159);
+
+      // document.getElementById("sun").style.transform="rotate(70deg)";
+      TweenLite.to("#sun", 1.1, {
+        css: {
+          transform: "rotate(177deg)",
+        },
+        delay: 0.03,
+      });
+    })
+    .on("leave", function () {
+      setTimeout(() => {
+        document.getElementById("hello").innerHTML = "SKILLS";
+      }, 85);
+
+      TweenLite.to("#sun", 1.1, {
+        css: {
+          transform: "rotate(90deg)",
+        },
+        delay: 0.03,
+      });
+    })
+    .addTo(controller);
 
 function red() {
   document.getElementById("home").style.color = "red";
@@ -102,15 +155,30 @@ var contact = $("#contact");
 var navtags = $(".navtags");
 var victory = $(".letter-inner3");
 var toggle = $("#toggle");
-t1.from(description, 0.8, { y: 10, autoAlpha: 0, ease: Power1.easeIn });
+t1.from(description, 0.8, {
+  y: 10,
+  autoAlpha: 0,
+  ease: Back.easeOut.config(3),
+});
 t1.from(navtags, 0.8, { y: 10, autoAlpha: 0, ease: Power1.easeIn });
 
-t1.from(letter, 1, { x: -70, ease: Power1.easeOut }, "+=0.6");
-t1.from(letter2, 1.2, { x: 70, ease: Power1.easeOut }, "-=1");
-t1.from(victory, 1, { y: 65, autoAlpha: 0, ease: Power1.easeOut });
 
-t1.from(contact, 0.8, { y: 10, autoAlpha: 0, ease: Power1.easeIn });
-t1.from(toggle, 0.5, { y: -50, autoAlpha: 0, ease: Power1.easeIn });
+// t1.from(letter, 1, {autoAlpha: 0, ease: Power1.easeOut }, "+=0.6");
+// t1.from(letter2, 1.2, { x: 70, ease: Power1.easeOut }, "-=1");
+t1.from(victory, 0.7, { y: 35, autoAlpha: 0, ease: Back.easeOut.config(3) });
+
+t1.from(
+  contact,
+  0.8,
+  { y: 10, autoAlpha: 0, ease: Back.easeOut.config(3) },
+  "-=0.6"
+);
+t1.from(
+  toggle,
+  2,
+  { y: 30, autoAlpha: 0, ease: Elastic.easeOut.config(1,0.3) },
+  "-=0.6"
+);
 
 $(".p-10").on("mouseenter", function () {
   $(".cursor").css({ "background-image": "url(image-1.png)" });
@@ -154,16 +222,53 @@ $($overlay).on("click", function () {
     $("ion-icon").attr("name", "chevron-down");
   }
 });
+// $("#toggle").on("click", function () {
+//   if (document.getElementById("styles").getAttribute("href") == "index.css") {
+//     document.getElementById("styles").setAttribute("href", "light.css");
+//     document.getElementById("toggle").innerHTML =
+//       '<i class="fas fa-moon fa-lg"></i>';
+//   } else {
+//     document.getElementById("styles").setAttribute("href", "index.css");
+//     document.getElementById("toggle").innerHTML =
+//       '<i class="fas fa-sun fa-lg" id="sun"></i>';
+//   }
+// });
+
 $("#toggle").on("click", function () {
   if (document.getElementById("styles").getAttribute("href") == "index.css") {
     document.getElementById("styles").setAttribute("href", "light.css");
     document.getElementById("toggle").innerHTML =
       '<i class="fas fa-moon fa-lg"></i>';
+      localStorage.setItem("theme", "light.css");
+      localStorage.setItem("icon", '<i class="fas fa-moon fa-lg"></i>');
   } else {
     document.getElementById("styles").setAttribute("href", "index.css");
     document.getElementById("toggle").innerHTML =
       '<i class="fas fa-sun fa-lg" id="sun"></i>';
+      localStorage.setItem("theme", "index.css");
+       localStorage.setItem(
+         "icon",
+         '<i class="fas fa-sun fa-lg" id="sun"></i>'
+       );
   }
 });
 
 
+
+$('.clicks').on('mouseenter',function(){
+   if (document.getElementById("styles").getAttribute("href") == "index.css") {
+   document.getElementById('cursor').style.cssText="background-color:blue !important;width: 10px;height: 10px;animation: cursor 0.5s ease-in-out forwards;"
+   }else{
+     document.getElementById("cursor").style.cssText =
+       "background-color:orange !important;width: 10px;height: 10px;animation: cursor 0.5s ease-in-out forwards;";
+   }
+})
+.on('mouseleave',function(){
+   if (document.getElementById("styles").getAttribute("href") == "index.css") {
+    document.getElementById("cursor").style.cssText =
+      "background-color:rgba(117, 117, 240, 0.144);width: 50px !important;height: 50px !important;";
+   }else{
+      document.getElementById("cursor").style.cssText =
+        "background-color:rgba(248, 209, 137, 0.212);width: 50px !important;height: 50px !important;";
+   }
+})

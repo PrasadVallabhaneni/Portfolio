@@ -14,10 +14,34 @@ span{
 
 .letter {
     /* position: relative; */
-    overflow: hidden;
+    overflow-y: hidden;
     display: inline-flex;
 
     /* background-color: red; */
+}
+.letter-inner{
+    /* background-color: red; */
+    position: relative;
+    top: 70px;
+  line-height: 90%;
+    animation: animate 0.8s ease-in-out forwards;
+    animation-delay: calc(0.1s*var(--i));
+}
+.letter-inner2{
+    /* background-color: red; */
+    position: relative;
+    top: 70px;
+  line-height: 89%;
+    animation: animate 0.8s ease-in-out forwards;
+    animation-delay: calc(0.1s*var(--i));
+}
+
+
+@keyframes animate{
+ /* 0%   {top: 30px;} */
+  to {top: 0px;  }
+
+
 }
 #toggle{
     position: fixed;
@@ -36,19 +60,41 @@ background-color : #101010;
     box-shadow: 0px 0px 2px 2px rgba(163, 162, 162, 0.295);
     cursor: pointer;
 }
+/* .navtags:hover ~ #cursor,#toggle:hover ~ #cursor{
+    background-color:orange;
+    width: 10px;
+    height: 10px;
+    animation: cursor 0.5s ease-in-out forwards;
+} */
+@keyframes cursor{
+    0%{
+        width: 10px;
+        height: 10px;
+    }
+    40%{
+        width: 20px;
+        height: 20px;
+    }
+    100%{
+        width: 10px;
+        height: 10px;
+    }
+}
 #cursor{
-    top: 0px;
-    width: 30px;
-    height: 30px;
+     top: 0px;
+    width: 50px;
+    height: 50px;
     position: fixed;
     border-radius: 100px;
-    background-color: rgba(241, 241, 245, 0.288);
--webkit-transition: all 0.5s  cubic-bezier(0.25, 1, 0.3, 1);
--ms-transition: all 0.5s  cubic-bezier(0.25, 1, 0.3, 1);
--o-transition: all 0.5s  cubic-bezier(0.25, 1, 0.3, 1);
--moz-transition: all 0.5s  cubic-bezier(0.25, 1, 0.3, 1);
+    background-color: rgba(248, 209, 137, 0.212) !important;
+-webkit-transition: all 0.6s  cubic-bezier(0.25, 1, 0.3, 1);
+-ms-transition: all 0.6s  cubic-bezier(0.25, 1, 0.3, 1);
+-o-transition: all 0.6s  cubic-bezier(0.25, 1, 0.3, 1);
+-moz-transition: all 0.6s  cubic-bezier(0.25, 1, 0.3, 1);
 
     z-index: 3;
+    
+    /* transition: 0.5s; */
 }
 #display{
     display: inline-flex;
@@ -62,8 +108,12 @@ color : #101010;
     height: 100vh;
     position: fixed;
     margin-top: 0vh;
-background-size: 200% 200%;
-background-image: linear-gradient(to top, #101010 50%, transparent 50%);
+background-size: 100% 400%;
+/* background-image: linear-gradient(to top, #101010 50%, transparent 50%); */
+
+background-image : linear-gradient(to top, #101010, #101010 25%, black 25%, black 50%, #101010 50%, #101010 75%, black 75%, black);
+
+
 
 
 -webkit-transition:  all 1s cubic-bezier(0.25, 1, 0.3, 1), color 0.5s ease;
@@ -83,36 +133,84 @@ transition: all 1s cubic-bezier(0.25, 1, 0.3, 1), color 0.5s ease;
 
 
 .layer2{
-/* background-color: #F2F2F2; */
 
 
-color : black !important;
+background-position: 0% 33.5%;
+/* -webkit-transition: all 1s cubic-bezier(0.25, 1, 0.3, 1), color 0.5s ease;
 
-width: 100%;
-height: 100vh;
-position: fixed;
-margin-top: 0;
+transition: all 1s cubic-bezier(0.25, 1, 0.3, 1), color 0.5s ease; */
 
-background-image : linear-gradient(to top, #101010 50%, transparent 50%);
+color: black !important;
 
-
-
-background-position: 0 100%;
--webkit-transition: all 1s cubic-bezier(0.25, 1, 0.3, 1), color 0.5s ease;
+}
+.layer3{
 
 
-/* -moz-transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1), color 0.5s ease;
+background-position: 0% 67%;
+/* -webkit-transition: all 1s cubic-bezier(0.25, 1, 0.3, 1), color 0.5s ease;
 
--ms-transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1), color 0.5s ease;
+transition: all 1s cubic-bezier(0.25, 1, 0.3, 1), color 0.5s ease; */
 
--o-transition:all 0.5s cubic-bezier(0.25, 1, 0.3, 1), color 0.5s ease; */
-
-transition: all 1s cubic-bezier(0.25, 1, 0.3, 1), color 0.5s ease;
-
+color : #101010 !important;
 
 
 }
+#skillsHeader{
+    position: relative;
+    text-align: center;
+    font-family: "Mukta", sans-serif;
+    font-size: 30px;
+    letter-spacing: 8px;
+    color: white;
+    
+}
+#projectHeader{
+     position: absolute;
+    text-align: center;
+    font-family: "Mukta", sans-serif;
+    font-size: 30px;
+    letter-spacing: 8px;
+    color: white;
+    margin-top: 6%;
+    margin-left: 43%;
+    z-index: 3;
+    /* top: 30%; */
+}
+#skills{
+    height: 100%;
+    overflow: hidden;
+    
+}
+.row{
+    width: 100%;
+      
+    /* border: 1px solid black; */
+}
+#front{
+    
+   margin-bottom: 5%;
+   transform: translateY(20%);
+    /* border: 1px solid black; */
+  
+}
+#back{
+    margin-top: 2%;
+}
+.skillTitle{
+    width: 200px;
+    font-family: "Balsamiq Sans", cursive;
+    font-size: 4vw;
+   color: rgba(245, 242, 242, 0.829);
+}
+.hr1{
+    background-color: #f2f2f23b;
+}
 
+.logos >img{
+    width: 96px;
+    height: 96px;
+    margin-right: 5%;
+}
 .worksColor{
 color: #F2F2F2 !important;
 
@@ -121,7 +219,7 @@ color: #F2F2F2 !important;
 
 
 .text {
-    display:flex;
+   display:flex;
     width: 100%;
     height: 100%;
     justify-content: center;
@@ -247,7 +345,7 @@ background-color: rgba(0, 128, 0, 0);
 
 #works{
     /* position: relative; */
-    height: 95vh;
+    /* height: 95vh; */
     /* padding: 50px; */
     z-index: 3;
     
@@ -327,6 +425,12 @@ font-family: "Balsamiq Sans", cursive;
 }
 
 
+@media only screen and (max-width:1400px){
+#works {
+    height: 80vh;
+}
+
+}
 
 @media only screen and (max-width: 900px) {
     #about {
@@ -359,6 +463,11 @@ transform: scale(1.8, 5);
 #contact{
     top:83%
 }
+#toggle{
+    left:93%
+}
+
+
 }
 
 @media only screen and (max-width: 500px){
@@ -366,12 +475,21 @@ transform: scale(1.8, 5);
 display: none;
 
    }
-#toggle {
-    left: 89%
+   #toggle{
+       left:89% 
+   }
+   .logos > img{
+       width: 70px;
+       height: 70px;
+   }
+   #projectHeader{
+       position: relative;
+       margin-left: -5%;
+       /* font-size: 30px; */
+   }
+   
 }
 
-    
-}
 
 
 
