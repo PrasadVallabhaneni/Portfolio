@@ -269,7 +269,7 @@ z-index: 4;
     float: right;
     font-size: 17px;
     margin: 15px;
-    left: 94%;
+    left: 94.5%;
     text-decoration: none;
     color: white;
     font-family: "Mukta", sans-serif;
@@ -425,24 +425,30 @@ font-family: "Balsamiq Sans", cursive;
 }
 
 
-@media only screen and (max-width:1400px){
+@media only screen and (max-width:1100px){
 #works {
     height: 80vh;
 }
-
+#wrk{
+    left: 92%;
+}
+#back{
+    margin-top: 10%;
+}
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
     #about {
         font-size: 33px;
         
     }
     #wrk {
-        left: 81%;
+        left: 90%;
     }
+    
 
 .text{
-    font-size: 80px;
+    font-size: 130px;
 transform: scale(1.8, 5);
 
 }
@@ -466,7 +472,13 @@ transform: scale(1.8, 5);
 #toggle{
     left:93%
 }
-
+#back {
+    margin-top: 10%;
+}
+#projectHeader{
+    margin-left: 35%;
+    margin-top: -10%;
+}
 
 }
 
@@ -474,6 +486,14 @@ transform: scale(1.8, 5);
    .cursor{
 display: none;
 
+   }
+   .text{
+    font-size: 90px;
+transform: scale(1.8, 5);
+
+}
+   #wrk{
+       left: 80%;
    }
    #toggle{
        left:89% 
@@ -487,8 +507,20 @@ display: none;
        margin-left: -5%;
        /* font-size: 30px; */
    }
+   #back > .logos > img{
+       
+    width: 100px !important;
+    height: 60px !important;
+   }
+   #front > .logos >img{
+       margin-left: 20px;
+   }
+   #back{
+        margin-top: 20%;
+   }
    
 }
+
 
 
 
